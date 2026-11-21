@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.8.0.0" runtimeid="3.5.22.30" libversion="4.6.0.0" compiler="3.5.22.30" lmm="3.5.22.30" profile="CODESYS V3.5 SP22 Patch 3+" settings="SupportOPCUA, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="PametniLift" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeArray name="T_ARRAY__0__3__OF_BOOL" size="4" nativesize="4" typeclass="Array" iecname="ARRAY [0..3] OF BOOL" basetype="T_BOOL">
+      <ArrayDim minrange="0" maxrange="3" />
+    </TypeArray>
+    <TypeUserDef name="T_TOF" size="16" nativesize="32" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="TOF">
+      <UserDefElement iecname="IN" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="PT" type="T_TIME" byteoffset="4" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="8" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="ET" type="T_TIME" byteoffset="12" vartype="VAR_OUTPUT" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TON" size="16" nativesize="32" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="TON">
+      <UserDefElement iecname="IN" type="T_BOOL" byteoffset="0" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="PT" type="T_TIME" byteoffset="4" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="8" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="ET" type="T_TIME" byteoffset="12" vartype="VAR_OUTPUT" access="ReadWrite" />
+    </TypeUserDef>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL">
+        <Node name="aPoziviDole" type="T_ARRAY__0__3__OF_BOOL" access="ReadWrite" />
+        <Node name="aPoziviGore" type="T_ARRAY__0__3__OF_BOOL" access="ReadWrite" />
+        <Node name="aPoziviKabina" type="T_ARRAY__0__3__OF_BOOL" access="ReadWrite" />
+        <Node name="bBtn_Down1" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBtn_Down2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBtn_Down3" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBtn_F0" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBtn_F1" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBtn_F2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBtn_F3" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBtn_Up0" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBtn_Up1" type="T_BOOL" access="ReadWrite" />
+        <Node name="bBtn_Up2" type="T_BOOL" access="ReadWrite" />
+        <Node name="bGoingUp" type="T_BOOL" access="ReadWrite" />
+        <Node name="bSystemActive" type="T_BOOL" access="ReadWrite" />
+        <Node name="iCurrentFloor" type="T_INT" access="ReadWrite" />
+        <Node name="iDirection" type="T_INT" access="ReadWrite" />
+        <Node name="iState" type="T_INT" access="ReadWrite" />
+        <Node name="iTargetFloor" type="T_INT" access="ReadWrite" />
+        <Node name="qDoorClose" type="T_BOOL" access="ReadWrite" />
+        <Node name="qDoorOpen" type="T_BOOL" access="ReadWrite" />
+        <Node name="qMotorDown" type="T_BOOL" access="ReadWrite" />
+        <Node name="qMotorUp" type="T_BOOL" access="ReadWrite" />
+        <Node name="rCarPosition" type="T_REAL" access="ReadWrite" />
+        <Node name="rCurrentWeight" type="T_REAL" access="ReadWrite" />
+        <Node name="snDoorClosed" type="T_BOOL" access="ReadWrite" />
+        <Node name="snDoorOpen" type="T_BOOL" access="ReadWrite" />
+        <Node name="snFloor0" type="T_BOOL" access="ReadWrite" />
+        <Node name="snFloor1" type="T_BOOL" access="ReadWrite" />
+        <Node name="snFloor2" type="T_BOOL" access="ReadWrite" />
+        <Node name="snFloor3" type="T_BOOL" access="ReadWrite" />
+        <Node name="snPhotoCell" type="T_BOOL" access="ReadWrite" />
+      </Node>
+      <Node name="PLC_PRG">
+        <Node name="i" type="T_INT" access="ReadWrite" />
+        <Node name="sStateName" type="T_STRING" access="ReadWrite" />
+        <Node name="tClosing" type="T_TON" access="ReadWrite" />
+        <Node name="tOffDelay" type="T_TOF" access="ReadWrite" />
+        <Node name="tOpening" type="T_TON" access="ReadWrite" />
+        <Node name="tWait" type="T_TON" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>

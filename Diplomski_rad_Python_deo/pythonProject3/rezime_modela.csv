@@ -1,0 +1,4 @@
+Model,Test tacnost (%),CV tacnost (%),CV std (%)
+Stablo Odlucivanja,64.39,63.05,0.96
+Random Forest,61.48,62.28,1.07
+k-NN,60.46,61.74,0.98
